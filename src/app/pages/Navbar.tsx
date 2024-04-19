@@ -42,7 +42,7 @@ export function Navbar() {
           </button>
           <ModeToggle />
           <Avatar>
-            <AvatarImage src="https://avatars.githubusercontent.com/u/96244930?u=9fdb860068c89c11c1ec605b72d7a2f254601922&v=4" />
+             <a href="https://github.com/lalitkumarjangid" target='_blank'><AvatarImage src="https://avatars.githubusercontent.com/u/96244930?u=9fdb860068c89c11c1ec605b72d7a2f254601922&v=4" /></a>
             <AvatarFallback>LK</AvatarFallback>
           </Avatar>
         </div>
