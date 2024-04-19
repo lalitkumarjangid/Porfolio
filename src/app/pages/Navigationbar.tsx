@@ -18,7 +18,7 @@ export function Navigationbar() {
         }
       >
         <img
-          src={`/profile.png`}
+          src={`/new-profile.png`}
           alt="hero"
           height={720}
           width={1200}
