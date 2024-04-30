@@ -7,7 +7,7 @@ import { useForm, ValidationError } from '@formspree/react';
 const ContactForm: React.FC = () => {
   const [state, handleSubmit] = useForm("xgegrodz");
   if (state.succeeded) {
-      return <p className='text-4xl sm:text-7xl font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 py-8 '>Thanks for joining!</p>;
+      return <p className='text-4xl sm:text-7xl font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 py-8 '>Thanks for Submit !</p>;
   }
   return (
     <form onSubmit={handleSubmit} className="flex flex-col space-y-4">
