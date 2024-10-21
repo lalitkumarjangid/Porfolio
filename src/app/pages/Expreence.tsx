@@ -59,7 +59,7 @@ export function Experience() {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5, duration: 0.5 }}
       >
-        In my web dev journey, I've thrived at startups with diverse projects.
+        In my web dev journey, I&#39;ve thrived at startups with diverse projects.
       </motion.p>
       <TracingBeam className="px-6">
         <div className="max-w-2xl mx-auto antialiased pt-4 relative">
