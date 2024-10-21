@@ -9,6 +9,7 @@ import { AboutMe } from "./pages/AboutMe";
 import { Projects } from "./pages/Projects";
 import { Resume } from "./pages/Resume";
 import { Contact } from "./pages/Contact";
+import Expreence from "./pages/Expreence";
 
 
 export default function Home() {
@@ -19,7 +20,8 @@ export default function Home() {
       <AboutMe />
   <Teckstacks />
   <Projects />
-  <Resume />
+  <Expreence/>
+  {/* <Resume /> */}
   <br />
   <Contact />
     </div>

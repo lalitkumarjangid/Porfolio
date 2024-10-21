@@ -94,7 +94,52 @@ const content = [
           </div>
         ),
       },
+      {
+        title: (
+            <a href="https://gyanblog.vercel.app" target="_blank" rel="noopener noreferrer">
+              Gyan Blog
+            </a>
+          ),
+        description:
+          "Gyan Blog is a blog site developed using modern web technologies. It provides a platform for users to read and share insightful articles on various topics.",
+        content: (
+          <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
+           <a href="https://gyanblog.vercel.app" target="_blank" rel="noopener noreferrer">
+  <img
+    src="/gyan.png"
+    width={300}
+    height={700}
+    className="h-full w-full object-cover"
+    alt="Gyan Blog"
+  />
+</a>
+          </div>
+        ),
+      },
+      {
+        title: (
+            <a href="https://postimage.vercel.app" target="_blank" rel="noopener noreferrer">
+              Post Image
+            </a>
+          ),
+        description:
+          "Post Image is a platform for storing and sharing images. It provides a user-friendly interface for uploading and managing images.",
+        content: (
+          <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
+           <a href="https://postimage.vercel.app" target="_blank" rel="noopener noreferrer">
+  <img
+    src="/postimage.png"
+    width={300}
+    height={500}
+    className="h-full w-full object-cover"
+    alt="Post Image"
+  />
+</a>
+          </div>
+        ),
+      },
 ];
+
 export function Projects() {
   return (
     <div className="p-10">

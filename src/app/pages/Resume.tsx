@@ -10,7 +10,7 @@ const tabs = [
         value: "Resume",
         content: (
             <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-cyan-950 to-state-900">
-               <a href="/new-resume.pdf" download="Lalit's Resume"><h6 className="text-base">Download</h6></a>
+               <a href="/new-resume.pdf" download="Lalit's Resume"><h6 className="text-base">Download latest resume</h6></a>
                 <div>
                     <DummyContent />
                 </div>
