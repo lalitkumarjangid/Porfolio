@@ -7,7 +7,7 @@ import { Navbar } from "./pages/Navbar";
 import { Teckstacks } from "./pages/techstacks";
 import { AboutMe } from "./pages/AboutMe";
 import { Projects } from "./pages/Projects";
-import { Resume } from "./pages/Resume";
+// import { Resume } from "./pages/Resume";
 import { Contact } from "./pages/Contact";
 import Expreence from "./pages/Expreence";
 

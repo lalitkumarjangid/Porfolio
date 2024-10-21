@@ -1,4 +1,11 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Features
+
+- **React JS**: Modern JavaScript library for building user interfaces
+- **Tailwind CSS**: Utility-first CSS framework for rapid UI development
+- **ShadCN**: Shadow DOM components for encapsulated styles
+- **Acertinity UI**: Custom UI components for a unique look and feel
+- **FormSpace**:Catch data from form and mail it to user
 
 ## Getting Started
 
