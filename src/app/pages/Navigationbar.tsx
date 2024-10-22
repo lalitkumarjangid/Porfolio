@@ -95,14 +95,14 @@ export function Navigationbar() {
               >
                 Linktree
               </a>
-              <a
+              {/* <a
                 href="https://lalitdev.vercel.app"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-purple-500 text-white px-2 py-1 rounded text-xs"
               >
                 Portfolio
-              </a>
+              </a> */}
             </div>
           </div>
 
@@ -160,14 +160,14 @@ export function Navigationbar() {
               >
                 Twitter
               </a>
-              <a
+              {/* <a
                 href="https://lalitdev.vercel.app"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-400 hover:underline text-xs"
               >
                 Portfolio
-              </a>
+              </a> */}
             </div>
           </div>
         </div>
