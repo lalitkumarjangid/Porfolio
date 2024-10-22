@@ -16,7 +16,6 @@ export function Navigationbar() {
     public_repos: number;
   }
 
-  const [profileData, setProfileData] = useState<ProfileData | null>(null);
   interface RepoData {
     id: number;
     name: string;
@@ -24,6 +23,7 @@ export function Navigationbar() {
     html_url: string;
   }
 
+  const [profileData, setProfileData] = useState<ProfileData | null>(null);
   const [repos, setRepos] = useState<RepoData[]>([]);
 
   useEffect(() => {
@@ -47,84 +47,100 @@ export function Navigationbar() {
   if (!profileData) return <div>Loading...</div>;
 
   return (
-    <div className="flex justify-center items-center w-full h-full bg-neutral-900 text-white p-4">
+    <div className="flex justify-center items-center w-full min-h-screen bg-neutral-900 text-white p-2 md:p-4">
       <ContainerScroll
-       titleComponent={
-        <>
-          <h1 className="text-4xl font-semibold bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500">
-            Empowering Innovation with <br />
-            <span className="text-4xl md:text-[6rem]  font-bold mt-1 leading-none from-neutral-200 to-neutral-500">
-              Full Stack Development
-            </span>
-          </h1>
-        </>
-      }
+        titleComponent={
+          <>
+            <h1 className="text-xl md:text-4xl font-semibold bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500">
+              Empowering Innovation with <br />
+              <span className="text-2xl md:text-[6rem] font-bold mt-1 leading-none from-neutral-200 to-neutral-500">
+                Full Stack Development
+              </span>
+            </h1>
+          </>
+        }
       >
-        <div className="grid grid-cols-3 gap-4 h-full">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-4 h-full">
           {/* GitHub Profile Section */}
-          <div className="col-span-2 bg-neutral-800 rounded-lg p-3">
-            <div className="flex items-center space-x-3">
+          <div className="md:col-span-2 bg-neutral-800 rounded-lg p-1.5 md:p-3">
+            <div className="flex items-start space-x-2 md:space-x-3">
               <img
                 src={profileData?.avatar_url}
                 alt="GitHub Avatar"
-                className="w-20 h-20 rounded-full object-cover"
+                className="w-14 h-14 md:w-20 md:h-20 rounded-full object-cover"
               />
-              <div>
-                <h2 className="text-xl font-bold">{profileData?.name}</h2>
-                <p className="text-xs">{profileData?.bio || "No bio available."}</p>
-                <p className="text-xs text-gray-400">
-                  Followers: {profileData?.followers} | Following: {profileData?.following}
+              <div className="flex-1 min-w-0">
+                <h2 className="text-sm md:text-xl font-bold truncate">{profileData?.name}</h2>
+                <p className="text-xs md:text-sm line-clamp-2 text-gray-300">
+                  {profileData?.bio || "No bio available."}
                 </p>
-                <p className="text-xs text-gray-400">Location: {profileData?.location || "Not specified"}</p>
+
+                {/* Stats Row */}
+                <div className="flex flex-wrap gap-2 text-xs text-gray-400 mt-1.5">
+                  <span>Followers: {profileData?.followers}</span>
+                  <span>Following: {profileData?.following}</span>
+                  <span>📍 {profileData?.location || "Not specified"}</span>
+                </div>
+
+                {/* Social Links for Mobile */}
+                <div className="flex flex-wrap gap-1.5 mt-2 md:hidden">
+                  <a
+                    href={profileData?.html_url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-neutral-700 text-white px-1 py-0.5 rounded text-[10px] inline-flex items-center"
+                  >
+                    GitHub
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/lalitkumarjangid"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-blue-600 text-white px-1 py-0.5 rounded text-[10px] inline-flex items-center"
+                  >
+                    LinkedIn
+                  </a>
+                  <a
+                    href="https://twitter.com/lkjlalitkumar"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-blue-400 text-white px-1 py-0.5 rounded text-[10px] inline-flex items-center"
+                  >
+                    Twitter
+                  </a>
+                  <a
+                    href="https://linktr.ee/lalitkumarjangid"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-green-500 text-white px-1 py-0.5 rounded text-[10px] inline-flex items-center"
+                  >
+                    Links
+                  </a>
+                </div>
               </div>
-            </div>
-            <div className="flex space-x-2 mt-2">
-              <a
-                href={profileData?.html_url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-blue-500 text-white px-2 py-1 rounded text-xs"
-              >
-                GitHub Profile
-              </a>
-              <a
-                href="https://linktr.ee/lalitkumarjangid"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-green-500 text-white px-2 py-1 rounded text-xs"
-              >
-                Linktree
-              </a>
-              {/* <a
-                href="https://lalitdev.vercel.app"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-purple-500 text-white px-2 py-1 rounded text-xs"
-              >
-                Portfolio
-              </a> */}
             </div>
           </div>
 
           {/* Achievements and Highlights Section */}
-          <div className="bg-neutral-800 rounded-lg p-3">
-            <h3 className="text-lg font-semibold mb-2">Achievements</h3>
-            <ul className="list-disc ml-4 space-y-1 text-xs">
-              <li>🏆 GitHub Stars: {profileData?.public_repos}</li>
-              <li>🏅 Followers: {profileData?.followers}</li>
-              <li>🎖️ Open Source Contributor</li>
-              <li>✨ Full Stack Development Enthusiast</li>
+          <div className="bg-neutral-800 rounded-lg p-1.5 md:p-3">
+            <h3 className="text-sm md:text-lg font-semibold mb-1">Achievements</h3>
+            <ul className="list-none space-y-0.5 text-xs md:text-sm">
+              <li>🏆 {profileData?.public_repos} Repositories</li>
+              <li>🏅 {profileData?.followers} Followers</li>
+              <li>🎖️  Open Source Contributor</li>
+              <li>✨  Full Stack Development Enthusiast</li>
             </ul>
           </div>
 
           {/* Latest Repositories Section */}
-          <div className="col-span-3 bg-neutral-800 rounded-lg p-3">
-            <h3 className="text-lg font-semibold mb-2">Latest Repositories</h3>
-            <div className="grid grid-cols-3 gap-3">
+          {/* <div  className="overflow-auto" style={{ WebkitOverflowScrolling: 'touch', scrollbarWidth: 'thin' }}> */}
+          <div className="col-span-1 md:col-span-3 bg-neutral-800 rounded-lg p-1.5 md:p-3 ">
+            <h3 className="text-sm md:text-lg font-semibold mb-1">Latest Repositories</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-1.5 md:gap-3">
               {repos.slice(0, 6).map((repo) => (
                 <div key={repo?.id} className="bg-neutral-700 p-2 rounded">
-                  <h4 className="text-sm font-bold">{repo?.name}</h4>
-                  <p className="text-xs text-gray-300 line-clamp-2">
+                  <h4 className="text-xs md:text-sm font-bold truncate">{repo?.name}</h4>
+                  <p className="text-xs text-gray-300 line-clamp-2 my-1">
                     {repo?.description || "No description available."}
                   </p>
                   <a
@@ -133,17 +149,18 @@ export function Navigationbar() {
                     rel="noopener noreferrer"
                     className="text-blue-400 hover:underline text-xs"
                   >
-                    View Repository
+                    View Repo
                   </a>
                 </div>
               ))}
             </div>
           </div>
+          {/* </div> */}
 
-          {/* Social Media and Links Section */}
-          <div className="col-span-3 bg-neutral-800 rounded-lg p-3">
-            <h3 className="text-lg font-semibold mb-1">Social Media & Links</h3>
-            <div className="flex space-x-4">
+          {/* Social Media and Links Section - Desktop Only */}
+          <div className="hidden md:block col-span-1 md:col-span-3 bg-neutral-800 rounded-lg p-1.5 md:p-3">
+            <h3 className="text-sm md:text-lg font-semibold mb-1">Connect</h3>
+            <div className="flex flex-wrap gap-3">
               <a
                 href="https://www.linkedin.com/in/lalitkumarjangid"
                 target="_blank"
@@ -160,14 +177,6 @@ export function Navigationbar() {
               >
                 Twitter
               </a>
-              {/* <a
-                href="https://lalitdev.vercel.app"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-400 hover:underline text-xs"
-              >
-                Portfolio
-              </a> */}
             </div>
           </div>
         </div>
@@ -175,3 +184,5 @@ export function Navigationbar() {
     </div>
   );
 }
+
+export default Navigationbar;

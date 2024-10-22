@@ -99,18 +99,18 @@ export const projects = [
         link: "https://www.postgresql.org/docs/",
         icon: <SiPostgresql />
     },
-    {
-        title: "Microsoft SQL Server",
-        description: "A relational database management system developed by Microsoft.",
-        link: "https://docs.microsoft.com/en-us/sql/sql-server/",
-        icon: <SiMicrosoftsqlserver />
-    },
-    {
-        title: "SQL",
-        description: "A domain-specific language used in programming and designed for managing data held in a relational database management system.",
-        link: "https://en.wikipedia.org/wiki/SQL",
-        icon: <FaDatabase />
-    },
+    // {
+    //     title: "Microsoft SQL Server",
+    //     description: "A relational database management system developed by Microsoft.",
+    //     link: "https://docs.microsoft.com/en-us/sql/sql-server/",
+    //     icon: <SiMicrosoftsqlserver />
+    // },
+    // {
+    //     title: "SQL",
+    //     description: "A domain-specific language used in programming and designed for managing data held in a relational database management system.",
+    //     link: "https://en.wikipedia.org/wiki/SQL",
+    //     icon: <FaDatabase />
+    // },
     {
         title: "Redis",
         description: "An open source, in-memory data structure store, used as a database, cache, and message broker.",
@@ -149,12 +149,12 @@ export const projects = [
         link: "https://turborepo.org/docs",
         icon: <SiTurborepo />
     },
-    {
-        title: "VS Code",
-        description: "A free source-code editor made by Microsoft for Windows, Linux and macOS. Features include support for debugging, syntax highlighting, intelligent code completion, snippets, code refactoring, and embedded Git.",
-        link: "https://code.visualstudio.com/docs",
-        icon: <SiVisualstudiocode />
-    },
+    // {
+    //     title: "VS Code",
+    //     description: "A free source-code editor made by Microsoft for Windows, Linux and macOS. Features include support for debugging, syntax highlighting, intelligent code completion, snippets, code refactoring, and embedded Git.",
+    //     link: "https://code.visualstudio.com/docs",
+    //     icon: <SiVisualstudiocode />
+    // },
     {
         title: "Git",
         description: "A free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.",
