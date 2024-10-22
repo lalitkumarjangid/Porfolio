@@ -19,43 +19,43 @@ export const projects = [
     // Frontend Technologies
     {
         title: "HTML/CSS",
-        description: "Standard markup language used in the creation of web pages, along with cascading style sheets for describing the look and formatting of a document written in HTML.",
+        description: "Markup and styling for web pages.",
         link: "https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5",
         icon: <FaHtml5 />
     },
     {
         title: "JavaScript",
-        description: "A high-level, interpreted programming language that conforms to the ECMAScript specification.",
+        description: "High-level, interpreted programming language.",
         link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide",
         icon: <FaJs />
     },
     {
         title: "TypeScript",
-        description: "An open-source language which builds on JavaScript, one of the world’s most used tools, by adding static type definitions.",
+        description: "JavaScript with static type definitions.",
         link: "https://www.typescriptlang.org/docs/",
         icon: <SiTypescript />
     },
     {
         title: "React JS",
-        description: "A JavaScript library for building user interfaces, maintained by Facebook and a community of individual developers and companies.",
+        description: "Library for building user interfaces.",
         link: "https://reactjs.org/docs/getting-started.html",
         icon: <FaReact />
     },
     {
         title: "Next JS",
-        description: "A React framework for production - it gives you the best developer experience with all the features you need for production: hybrid static & server rendering, TypeScript support, smart bundling, route pre-fetching, and more.",
+        description: "React framework for production.",
         link: "https://nextjs.org/docs",
         icon: <SiNextdotjs />
     },
     {
         title: "Tailwind CSS",
-        description: "A highly customizable, low-level CSS framework that gives you all of the building blocks you need to build bespoke designs without any annoying opinionated styles you have to fight to override.",
+        description: "Customizable low-level CSS framework.",
         link: "https://tailwindcss.com/docs",
         icon: <SiTailwindcss />
     },
     {
         title: "Redux",
-        description: "A Predictable State Container for JS Apps.",
+        description: "Predictable state container for JavaScript apps.",
         link: "https://redux.js.org/",
         icon: <SiRedux />
     },
@@ -63,19 +63,19 @@ export const projects = [
     // Backend Technologies
     {
         title: "Node JS",
-        description: "An open-source, cross-platform, back-end JavaScript runtime environment that runs on the V8 engine and executes JavaScript code outside a web browser.",
+        description: "JavaScript runtime environment for server-side code.",
         link: "https://nodejs.org/en/docs/",
         icon: <FaNodeJs />
     },
     {
         title: "Express JS",
-        description: "A minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.",
+        description: "Flexible web application framework for Node.js.",
         link: "https://expressjs.com/en/starter/installing.html",
         icon: <SiExpress />
     },
     {
         title: "PM2",
-        description: "A production process manager for Node.js applications with a built-in load balancer.",
+        description: "Process manager for Node.js applications.",
         link: "https://pm2.keymetrics.io/docs/usage/quick-start/",
         icon: <SiPm2 />
     },
@@ -83,43 +83,31 @@ export const projects = [
     // Databases
     {
         title: "MongoDB Atlas",
-        description: "A fully-managed cloud database developed by the same people that build MongoDB.",
+        description: "Fully-managed cloud database for MongoDB.",
         link: "https://docs.atlas.mongodb.com/",
         icon: <SiMongodb />
     },
     {
         title: "MySQL",
-        description: "An open-source relational database management system based on SQL – Structured Query Language.",
+        description: "Open-source relational database management system.",
         link: "https://dev.mysql.com/doc/",
         icon: <SiMysql />
     },
     {
         title: "Postgres",
-        description: "A free and open-source relational database management system emphasizing extensibility and SQL compliance.",
+        description: "Open-source relational database management system.",
         link: "https://www.postgresql.org/docs/",
         icon: <SiPostgresql />
     },
-    // {
-    //     title: "Microsoft SQL Server",
-    //     description: "A relational database management system developed by Microsoft.",
-    //     link: "https://docs.microsoft.com/en-us/sql/sql-server/",
-    //     icon: <SiMicrosoftsqlserver />
-    // },
-    // {
-    //     title: "SQL",
-    //     description: "A domain-specific language used in programming and designed for managing data held in a relational database management system.",
-    //     link: "https://en.wikipedia.org/wiki/SQL",
-    //     icon: <FaDatabase />
-    // },
     {
         title: "Redis",
-        description: "An open source, in-memory data structure store, used as a database, cache, and message broker.",
+        description: "In-memory data structure store and cache.",
         link: "https://redis.io/documentation",
         icon: <SiRedis />
     },
     {
         title: "Prisma",
-        description: "An open-source database toolkit. It replaces traditional ORMs and makes database access easy with an auto-generated and type-safe query builder for Node.js & TypeScript.",
+        description: "Database toolkit with type-safe query builder.",
         link: "https://www.prisma.io/docs/",
         icon: <SiPrisma />
     },
@@ -127,43 +115,37 @@ export const projects = [
     // DevOps and Tools
     {
         title: "AWS",
-        description: "A subsidiary of Amazon providing on-demand cloud computing platforms and APIs to individuals, companies, and governments, on a metered pay-as-you-go basis.",
+        description: "On-demand cloud computing services.",
         link: "https://aws.amazon.com/documentation/",
         icon: <FaAws />
     },
     {
         title: "Docker",
-        description: "An open platform for developing, shipping, and running applications. Docker enables you to separate your applications from your infrastructure so you can deliver software quickly.",
+        description: "Platform for developing and running applications.",
         link: "https://docs.docker.com/",
         icon: <FaDocker />
     },
     {
         title: "Kubernetes",
-        description: "An open-source system for automating deployment, scaling, and management of containerized applications.",
+        description: "Automates deployment and management of containers.",
         link: "https://kubernetes.io/docs/home/",
         icon: <SiKubernetes />
     },
     {
         title: "TurboRepo",
-        description: "A high-performance build system for JavaScript and TypeScript codebases. It uses a directed acyclic graph to only rebuild what's necessary.",
+        description: "High-performance build system for JavaScript.",
         link: "https://turborepo.org/docs",
         icon: <SiTurborepo />
     },
-    // {
-    //     title: "VS Code",
-    //     description: "A free source-code editor made by Microsoft for Windows, Linux and macOS. Features include support for debugging, syntax highlighting, intelligent code completion, snippets, code refactoring, and embedded Git.",
-    //     link: "https://code.visualstudio.com/docs",
-    //     icon: <SiVisualstudiocode />
-    // },
     {
         title: "Git",
-        description: "A free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.",
+        description: "Distributed version control system.",
         link: "https://git-scm.com/doc",
         icon: <FaGit />
     },
     {
         title: "GitHub",
-        description: "A provider of Internet hosting for software development and version control using Git.",
+        description: "Hosting for software development and version control.",
         link: "https://docs.github.com/en",
         icon: <FaGithub />
     },
@@ -171,13 +153,13 @@ export const projects = [
     // Programming Languages
     {
         title: "C++",
-        description: "A general-purpose programming language created by Bjarne Stroustrup as an extension of the C programming language, or 'C with Classes'.",
+        description: "General-purpose programming language.",
         link: "https://en.cppreference.com/w/",
         icon: <SiCplusplus />
     },
     {
         title: "Python",
-        description: "An interpreted, high-level, general-purpose programming language. Python's design philosophy emphasizes code readability with its notable use of significant indentation.",
+        description: "High-level programming language emphasizing readability.",
         link: "https://docs.python.org/3/",
         icon: <SiPython />
     },

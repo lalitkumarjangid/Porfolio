@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { ContainerScroll } from "@/components/ui/container-scroll-animation";
+import { FaLinkedin, FaTwitter } from 'react-icons/fa';
 
 export function Navigationbar() {
   interface ProfileData {
@@ -29,11 +30,15 @@ export function Navigationbar() {
   useEffect(() => {
     const fetchProfileData = async () => {
       try {
-        const response = await fetch("https://api.github.com/users/lalitkumarjangid");
+        const response = await fetch(
+          "https://api.github.com/users/lalitkumarjangid"
+        );
         const data = await response.json();
         setProfileData(data);
 
-        const reposResponse = await fetch(`${data.repos_url}?sort=created&direction=desc`);
+        const reposResponse = await fetch(
+          `${data.repos_url}?sort=created&direction=desc`
+        );
         const reposData = await reposResponse.json();
         setRepos(reposData);
       } catch (error) {
@@ -70,7 +75,9 @@ export function Navigationbar() {
                 className="w-14 h-14 md:w-20 md:h-20 rounded-full object-cover"
               />
               <div className="flex-1 min-w-0">
-                <h2 className="text-sm md:text-xl font-bold truncate">{profileData?.name}</h2>
+                <h2 className="text-sm md:text-xl font-bold truncate">
+                  {profileData?.name}
+                </h2>
                 <p className="text-xs md:text-sm line-clamp-2 text-gray-300">
                   {profileData?.bio || "No bio available."}
                 </p>
@@ -123,23 +130,29 @@ export function Navigationbar() {
 
           {/* Achievements and Highlights Section */}
           <div className="bg-neutral-800 rounded-lg p-1.5 md:p-3">
-            <h3 className="text-sm md:text-lg font-semibold mb-1">Achievements</h3>
+            <h3 className="text-sm md:text-lg font-semibold mb-1">
+              Achievements
+            </h3>
             <ul className="list-none space-y-0.5 text-xs md:text-sm">
               <li>🏆 {profileData?.public_repos} Repositories</li>
               <li>🏅 {profileData?.followers} Followers</li>
-              <li>🎖️  Open Source Contributor</li>
-              <li>✨  Full Stack Development Enthusiast</li>
+              <li>🎖️ Open Source Contributor</li>
+              <li>✨ Full Stack Development Enthusiast</li>
             </ul>
           </div>
 
           {/* Latest Repositories Section */}
           {/* <div  className="overflow-auto" style={{ WebkitOverflowScrolling: 'touch', scrollbarWidth: 'thin' }}> */}
           <div className="col-span-1 md:col-span-3 bg-neutral-800 rounded-lg p-1.5 md:p-3 ">
-            <h3 className="text-sm md:text-lg font-semibold mb-1">Latest Repositories</h3>
+            <h3 className="text-sm md:text-lg font-semibold mb-1">
+              Latest Repositories
+            </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-1.5 md:gap-3">
               {repos.slice(0, 6).map((repo) => (
                 <div key={repo?.id} className="bg-neutral-700 p-2 rounded">
-                  <h4 className="text-xs md:text-sm font-bold truncate">{repo?.name}</h4>
+                  <h4 className="text-xs md:text-sm font-bold truncate">
+                    {repo?.name}
+                  </h4>
                   <p className="text-xs text-gray-300 line-clamp-2 my-1">
                     {repo?.description || "No description available."}
                   </p>
@@ -165,16 +178,18 @@ export function Navigationbar() {
                 href="https://www.linkedin.com/in/lalitkumarjangid"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-400 hover:underline text-xs"
+                className="text-blue-400 hover:underline text-xs flex items-center gap-1"
               >
+                <FaLinkedin className="text-lg" />
                 LinkedIn
               </a>
               <a
                 href="https://twitter.com/lkjlalitkumar"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-400 hover:underline text-xs"
+                className="text-blue-400 hover:underline text-xs flex items-center gap-1"
               >
+                <FaTwitter className="text-lg" />
                 Twitter
               </a>
             </div>

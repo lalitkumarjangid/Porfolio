@@ -4,13 +4,13 @@ import { motion } from "framer-motion";
 import { TracingBeam } from "@/components/ui/tracing-beam";
 
 const fadeInUp = {
-  initial: { opacity: 0, y: -50 },
+  initial: { opacity: 0, y: -20 },
   animate: { opacity: 1, y: 0 },
   transition: { duration: 0.5 },
 };
 
 const fadeInLeft = (delay: number) => ({
-  initial: { opacity: 0, x: -50 },
+  initial: { opacity: 0, x: -20 },
   animate: { opacity: 1, x: 0 },
   transition: { delay, duration: 0.5 },
 });
@@ -30,15 +30,15 @@ const ExperienceEntry: React.FC<ExperienceEntryProps> = ({
   responsibilities,
   delay,
 }) => (
-  <motion.div className="mb-10" {...fadeInLeft(delay)}>
-    <h1 className="bg-black text-white rounded-full text-2xl sm:text-3xl w-fit px-6 py-2 mb-6 font-semibold">
+  <motion.div className="mb-6 sm:mb-8" {...fadeInLeft(delay)}>
+    <h1 className="bg-black text-white rounded-full text-lg sm:text-xl w-fit px-4 sm:px-6 py-2 mb-3 font-semibold shadow-md">
       {title}
     </h1>
-    <p className="text-gray-600 dark:text-gray-400 text-lg">{date}</p>
-    <p className="text-gray-800 dark:text-gray-200 text-lg">{location}</p>
-    <ul className="list-disc list-inside mt-2 space-y-1 dark:text-gray-300 text-base leading-relaxed">
+    <p className="text-gray-600 dark:text-gray-400 text-sm sm:text-base">{date}</p>
+    <p className="text-gray-800 dark:text-gray-200 text-sm sm:text-base">{location}</p>
+    <ul className="list-disc list-inside mt-2 space-y-1 dark:text-gray-300 text-sm sm:text-base leading-relaxed">
       {responsibilities.map((item, index) => (
-        <li key={index}>{item}</li>
+        <li key={index} className="pl-2">{item}</li>
       ))}
     </ul>
   </motion.div>
@@ -46,23 +46,23 @@ const ExperienceEntry: React.FC<ExperienceEntryProps> = ({
 
 export function Experience() {
   return (
-    <div className="p-6">
+    <div className="p-4 sm:p-6 bg-gray-50 dark:bg-gray-900 rounded-lg shadow-md">
       <motion.p
-        className="text-4xl sm:text-7xl font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 py-8 text-center"
+              className="text-4xl sm:text-7xl font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 py-8 text-center"
         {...fadeInUp}
       >
         Journey Highlights
       </motion.p>
       <motion.p
-        className="text-lg mb-6 dark:text-gray-300 text-center"
+        className="text-base mb-4 sm:mb-6 dark:text-gray-300 text-center"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5, duration: 0.5 }}
       >
         In my web dev journey, I&#39;ve thrived at startups with diverse projects.
       </motion.p>
-      <TracingBeam className="px-6">
-        <div className="max-w-2xl mx-auto antialiased pt-4 relative">
+      <TracingBeam className="px-5 sm:px-6 my-2 sm:my-4 " > {/* Added my-2 for margin */}
+        <div className="max-w-2xl mx-4 antialiased pt-4 relative">
           <ExperienceEntry
             title="Guru Ji Astro"
             date="July 2024 – Present"
