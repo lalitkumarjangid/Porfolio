@@ -90,9 +90,14 @@ export const CardTitle = ({
   icon: JSX.Element;
 }) => {
   return (
-    <h4 className={cn("text-zinc-100 font-bold tracking-wide mt-4 flex items-center justify-between", className)}>
+    <h4
+      className={cn(
+        "text-zinc-100 font-bold tracking-wide mt-4 flex items-center justify-between text-sm sm:text-base md:text-lg",
+        className
+      )}
+    >
       {children}
-      <span className="ml-2 h-8 w-8 rounded-full flex items-center justify-center bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200">
+      <span className="ml-2 h-6 w-6 sm:h-8 sm:w-8 rounded-full flex items-center justify-center bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200">
         {icon}
       </span>
     </h4>

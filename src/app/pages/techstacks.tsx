@@ -6,14 +6,19 @@ import { SiTypescript, SiNextdotjs, SiExpress, SiMongodb, SiMysql, SiPostgresql,
 
 export function Teckstacks() {
     return (
-        <div className="max-w-5xl mx-auto px-8">
-            <p className="text-4xl sm:text-7xl font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 py-8 text-center">
-                Tech Stacks
-            </p>
-            <HoverEffect items={projects} />
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <p className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 py-6 text-center">
+          Tech Stacks
+        </p>
+        <div className="w-full">
+          <HoverEffect
+            items={projects}
+            className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4"
+          />
         </div>
+      </div>
     );
-}
+  }
 
 export const projects = [
     // Frontend Technologies
@@ -164,3 +169,5 @@ export const projects = [
         icon: <SiPython />
     },
 ];
+
+export default Teckstacks;
