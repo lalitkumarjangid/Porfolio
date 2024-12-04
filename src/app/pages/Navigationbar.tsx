@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState, useCallback, useMemo } from "react";
 import { ContainerScroll } from "@/components/ui/container-scroll-animation";
-import { FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { FaLinkedin, FaTwitter,FaGithub} from 'react-icons/fa';
 
 interface ProfileData {
   avatar_url: string;
@@ -37,7 +37,7 @@ export function Navigationbar() {
       // Parallel fetching of profile and repos
       const [profileResponse, reposResponse] = await Promise.all([
         fetch(`https://api.github.com/users/${username}`),
-        fetch(`https://api.github.com/users/${username}/repos?sort=created&direction=desc`)
+        fetch(`https://api.github.com/users/${username}/repos?sort=updated&direction=desc`)
       ]);
 
       if (!profileResponse.ok || !reposResponse.ok) {
@@ -68,7 +68,8 @@ export function Navigationbar() {
       href: profileData?.html_url || '',
       label: 'GitHub',
       className: 'bg-neutral-700',
-      mobile: true
+      mobile: true,
+      icon: FaGithub
     },
     {
       href: 'https://www.linkedin.com/in/lalitkumarjangid',
