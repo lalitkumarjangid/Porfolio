@@ -2,7 +2,7 @@
 
 import { HoverEffect } from "@/components/ui/card-hover-effect";
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaAws, FaDocker, FaGithub, FaGit, FaDatabase } from 'react-icons/fa';
-import { SiTypescript, SiNextdotjs, SiExpress, SiMongodb, SiMysql, SiPostgresql, SiPrisma, SiKubernetes, SiTurborepo, SiVisualstudiocode, SiTailwindcss, SiCplusplus, SiPython, SiRedux, SiRedis, SiPm2, SiMicrosoftsqlserver } from 'react-icons/si';
+import { SiTypescript, SiNextdotjs, SiExpress, SiMongodb, SiMysql,SiSolidity, SiPostgresql,SiEthereum, SiPrisma, SiKubernetes, SiTurborepo, SiVisualstudiocode, SiTailwindcss, SiCplusplus, SiPython, SiRedux, SiRedis, SiPm2, SiMicrosoftsqlserver } from 'react-icons/si';
 
 export function Teckstacks() {
     return (
@@ -20,7 +20,7 @@ export function Teckstacks() {
     );
   }
 
-export const projects = [
+  export const projects = [
     // Frontend Technologies
     {
         title: "HTML/CSS",
@@ -87,7 +87,7 @@ export const projects = [
 
     // Databases
     {
-        title: "MongoDB Atlas",
+        title: "MongoDB",
         description: "Fully-managed cloud database for MongoDB.",
         link: "https://docs.atlas.mongodb.com/",
         icon: <SiMongodb />
@@ -99,17 +99,17 @@ export const projects = [
         icon: <SiMysql />
     },
     {
-        title: "Postgres",
+        title: "Postgres Sql",
         description: "Open-source relational database management system.",
         link: "https://www.postgresql.org/docs/",
         icon: <SiPostgresql />
     },
-    {
-        title: "Redis",
-        description: "In-memory data structure store and cache.",
-        link: "https://redis.io/documentation",
-        icon: <SiRedis />
-    },
+    // {
+    //     title: "Redis",
+    //     description: "In-memory data structure store and cache.",
+    //     link: "https://redis.io/documentation",
+    //     icon: <SiRedis />
+    // },
     {
         title: "Prisma",
         description: "Database toolkit with type-safe query builder.",
@@ -130,12 +130,12 @@ export const projects = [
         link: "https://docs.docker.com/",
         icon: <FaDocker />
     },
-    {
-        title: "Kubernetes",
-        description: "Automates deployment and management of containers.",
-        link: "https://kubernetes.io/docs/home/",
-        icon: <SiKubernetes />
-    },
+    // {
+    //     title: "Kubernetes",
+    //     description: "Automates deployment and management of containers.",
+    //     link: "https://kubernetes.io/docs/home/",
+    //     icon: <SiKubernetes />
+    // },
     {
         title: "TurboRepo",
         description: "High-performance build system for JavaScript.",
@@ -167,6 +167,24 @@ export const projects = [
         description: "High-level programming language emphasizing readability.",
         link: "https://docs.python.org/3/",
         icon: <SiPython />
+    },
+    {
+        title: "Solidity",
+        description: "Programming language for writing smart contracts.",
+        link: "https://docs.soliditylang.org/en/v0.8.6/",
+        icon: <SiSolidity />
+    },
+    {
+        title: "Ethereum",
+        description: "Decentralized platform that runs smart contracts.",
+        link: "https://ethereum.org/en/developers/docs/",
+        icon: <SiEthereum />
+    },
+    {
+        title: "EVM",
+        description: "Ethereum Virtual Machine, the runtime environment for smart contracts.",
+        link: "https://ethereum.org/en/developers/docs/evm/",
+        icon: <SiEthereum />
     },
 ];
 
