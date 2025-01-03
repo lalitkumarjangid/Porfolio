@@ -7,7 +7,7 @@ import { useForm, ValidationError } from '@formspree/react';
 const ContactForm: React.FC = () => {
   const [state, handleSubmit] = useForm("xgegrodz");
   if (state.succeeded) {
-      return <p className='text-4xl sm:text-7xl font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 py-8 '>Thanks for Submit!</p>;
+      return <p className='text-3xl sm:text-7xl font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 py-8 '>Thanks for Submit !</p>;
   }
   return (
     <form onSubmit={handleSubmit} className="flex flex-col space-y-4">
@@ -19,16 +19,19 @@ const ContactForm: React.FC = () => {
             name="name"
             placeholder="Your Name"
             className="ring-1 ring-gray-300 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 focus:ring-teal-400 mb-4"
+            required
           />
         </div>
         <div>
           <label htmlFor="email" className="text-sm">Email Address</label>
+          
           <input
             id="email"
             name="email"
             type="email"
             placeholder="Email"
             className="ring-1 ring-gray-300 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 focus:ring-teal-400 mb-4"
+            required
           />
           <ValidationError prefix="Email" field="email" errors={state.errors} />
         </div>
@@ -39,6 +42,7 @@ const ContactForm: React.FC = () => {
             placeholder="Message"
             rows={4}
             className="ring-1 ring-gray-300 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 focus:ring-teal-400 mb-4"
+            required
           ></textarea>
           <ValidationError prefix="Message" field="message" errors={state.errors} />
         </div>
@@ -49,13 +53,6 @@ const ContactForm: React.FC = () => {
     </form>
   );
 }
-
-
-
-
-
-
-
 
 
 

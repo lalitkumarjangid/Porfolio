@@ -65,7 +65,7 @@ export const Card = ({
   return (
       <div
           className={cn(
-              "rounded-xl h-full w-full pt-4 pb-4 overflow-hidden bg-neutral-900/50 border border-neutral-800 transition-all relative z-20",
+              "rounded-xl h-full w-full pl-1 pb-1 overflow-hidden bg-neutral-900/50 border border-neutral-800 transition-all relative z-20",
               className
           )}
       >
@@ -87,10 +87,10 @@ export const CardTitle = ({
 }) => {
   return (
       <h4
-          className={cn(
-              "text-zinc-100 font-semibold tracking-wide mt-2 flex items-center justify-start text-sm sm:text-base md:text-lg",
-              className
-          )}
+      className={cn(
+        "text-zinc-900 dark:text-zinc-100 font-semibold tracking-wide mt-2 flex items-center justify-start text-sm sm:text-base md:text-lg",
+        className
+      )}
       >
           {children}
           <div className="flex justify-end">
