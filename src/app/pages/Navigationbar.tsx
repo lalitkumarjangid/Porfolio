@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState, useCallback, useMemo } from "react";
 import { ContainerScroll } from "@/components/ui/container-scroll-animation";
-import { FaLinkedin, FaTwitter,FaGithub} from 'react-icons/fa';
+import { FaLinkedin, FaTwitter, FaGithub } from "react-icons/fa";
 
 interface ProfileData {
   avatar_url: string;
@@ -33,15 +33,17 @@ export function Navigationbar() {
     try {
       setIsLoading(true);
       const username = "lalitkumarjangid";
-      
+
       // Parallel fetching of profile and repos
       const [profileResponse, reposResponse] = await Promise.all([
         fetch(`https://api.github.com/users/${username}`),
-        fetch(`https://api.github.com/users/${username}/repos?sort=updated&direction=desc`)
+        fetch(
+          `https://api.github.com/users/${username}/repos?sort=updated&direction=desc`
+        ),
       ]);
 
       if (!profileResponse.ok || !reposResponse.ok) {
-        throw new Error('Failed to fetch data');
+        throw new Error("Failed to fetch data");
       }
 
       const profileData = await profileResponse.json();
@@ -52,7 +54,7 @@ export function Navigationbar() {
       setError(null);
     } catch (error) {
       console.error("Error fetching GitHub profile:", error);
-      setError('Unable to load profile data');
+      setError("Unable to load profile data");
     } finally {
       setIsLoading(false);
     }
@@ -63,35 +65,38 @@ export function Navigationbar() {
   }, [fetchProfileData]);
 
   // Memoize social links to prevent unnecessary re-renders
-  const socialLinks = useMemo(() => [
-    {
-      href: profileData?.html_url || '',
-      label: 'GitHub',
-      className: 'bg-neutral-700',
-      mobile: true,
-      icon: FaGithub
-    },
-    {
-      href: 'https://www.linkedin.com/in/lalitkumarjangid',
-      label: 'LinkedIn',
-      className: 'bg-blue-600',
-      mobile: true,
-      icon: FaLinkedin
-    },
-    {
-      href: 'https://twitter.com/lkjlalitkumar',
-      label: 'Twitter',
-      className: 'bg-blue-400',
-      mobile: true,
-      icon: FaTwitter
-    },
-    {
-      href: 'https://linktr.ee/lalitkumarjangid',
-      label: 'Links',
-      className: 'bg-green-500',
-      mobile: true
-    }
-  ], [profileData]);
+  const socialLinks = useMemo(
+    () => [
+      {
+        href: profileData?.html_url || "",
+        label: "GitHub",
+        className: "bg-neutral-700",
+        mobile: true,
+        icon: FaGithub,
+      },
+      {
+        href: "https://www.linkedin.com/in/lalitkumarjangid",
+        label: "LinkedIn",
+        className: "bg-blue-600",
+        mobile: true,
+        icon: FaLinkedin,
+      },
+      {
+        href: "https://twitter.com/lkjlalitkumar",
+        label: "Twitter",
+        className: "bg-blue-400",
+        mobile: true,
+        icon: FaTwitter,
+      },
+      {
+        href: "https://linktr.ee/lalitkumarjangid",
+        label: "Links",
+        className: "bg-green-500",
+        mobile: true,
+      },
+    ],
+    [profileData]
+  );
 
   // Loading and error states
   if (isLoading) {
@@ -105,7 +110,7 @@ export function Navigationbar() {
   if (error || !profileData) {
     return (
       <div className="flex justify-center items-center w-full min-h-screen bg-neutral-900 text-white">
-        {error || 'Unable to load profile'}
+        {error || "Unable to load profile"}
       </div>
     );
   }
@@ -151,18 +156,20 @@ export function Navigationbar() {
 
                 {/* Social Links for Mobile */}
                 <div className="flex flex-wrap gap-1.5 mt-2 md:hidden">
-                  {socialLinks.filter(link => link.mobile).map((link) => (
-                    <a
-                      key={link.label}
-                      href={link.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={`${link.className} text-white px-1 py-0.5 rounded text-[10px] inline-flex items-center`}
-                    >
-                      {link.icon ? <link.icon className="mr-1" /> : null}
-                      {link.label}
-                    </a>
-                  ))}
+                  {socialLinks
+                    .filter((link) => link.mobile)
+                    .map((link) => (
+                      <a
+                        key={link.label}
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`${link.className} text-white px-1 py-0.5 rounded text-[10px] inline-flex items-center`}
+                      >
+                        {link.icon ? <link.icon className="mr-1" /> : null}
+                        {link.label}
+                      </a>
+                    ))}
                 </div>
               </div>
             </div>
@@ -213,7 +220,7 @@ export function Navigationbar() {
             <h3 className="text-sm md:text-lg font-semibold mb-1">Connect</h3>
             <div className="flex flex-wrap gap-3">
               {socialLinks
-                .filter(link => link.icon)
+                .filter((link) => link.icon)
                 .map((link) => (
                   <a
                     key={link.label}

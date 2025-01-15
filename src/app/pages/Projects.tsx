@@ -8,7 +8,11 @@ import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 const content = [
   {
     title: (
-      <a href="https://myfinhub.vercel.app" target="_blank" rel="noopener noreferrer">
+      <a
+        href="https://myfinhub.vercel.app"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         My Finhub
       </a>
     ),
@@ -20,7 +24,11 @@ const content = [
   },
   {
     title: (
-      <a href="https://gyanblog.vercel.app" target="_blank" rel="noopener noreferrer">
+      <a
+        href="https://gyanblog.vercel.app"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         Gyan Blog
       </a>
     ),
@@ -32,7 +40,11 @@ const content = [
   },
   {
     title: (
-      <a href="https://postimage.vercel.app" target="_blank" rel="noopener noreferrer">
+      <a
+        href="https://postimage.vercel.app"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         Post Image
       </a>
     ),
@@ -44,7 +56,11 @@ const content = [
   },
   {
     title: (
-      <a href="https://devingpt.vercel.app" target="_blank" rel="noopener noreferrer">
+      <a
+        href="https://devingpt.vercel.app"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         Devin Gpt
       </a>
     ),
@@ -56,7 +72,11 @@ const content = [
   },
   {
     title: (
-      <a href="https://realvepio.vercel.app" target="_blank" rel="noopener noreferrer">
+      <a
+        href="https://realvepio.vercel.app"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         Vepio-Store
       </a>
     ),
@@ -133,4 +153,3 @@ export function Projects() {
     </div>
   );
 }
-
