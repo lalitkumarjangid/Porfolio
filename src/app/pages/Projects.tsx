@@ -57,18 +57,18 @@ const content = [
   {
     title: (
       <a
-        href="https://devingpt.vercel.app"
+        href="https://chatxyz.vercel.app"
         target="_blank"
         rel="noopener noreferrer"
       >
-        Devin Gpt
+        ChatXYZ
       </a>
     ),
     description:
-      "Devin Gpt is a dynamic chat application developed using React.js, Express.js, OpenAI API, and Tailwind CSS. It integrates the OpenAI API for real-time responses.",
-    github: "https://github.com/lalitkumarjangid",
-    live: "https://devingpt.vercel.app",
-    image: "/devin.png",
+      "A comprehensive AI Web-App built with React.js, Node.js, and multiple AI integrations including OpenAI and Gemini AI. Features include text-to-image generation, image-to-text conversion, AI chat, and code generation. Utilizes MongoDB, Cloudinary for storage, and JWT authentication.",
+    github: "https://github.com/lalitkumarjangid/Ai-webApp",
+    live: "https://chatxyz.vercel.app",
+    image: "/chatxyz.png",
   },
   {
     title: (
