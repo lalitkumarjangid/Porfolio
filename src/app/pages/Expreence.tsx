@@ -65,7 +65,7 @@ export function Experience() {
         <div className="max-w-2xl mx-4 antialiased pt-4 relative">
           <ExperienceEntry
             title="Guru Ji Astro"
-            date="July 2024 – Present"
+            date="July 2024 – December 2024"
             location="Full Stack Developer Intern, Jaipur, Rajasthan"
             responsibilities={[
               "Built RESTful APIs with Node.js and Express.js, boosting dashboard speed by 60% and designing efficient MongoDB schemas.",

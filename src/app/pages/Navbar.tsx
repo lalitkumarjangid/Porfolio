@@ -13,8 +13,8 @@ export function Navbar() {
       <nav className="flex justify-between py-4 px-6 bg-transparent dark:bg-transparent backdrop-blur">
         <div className="flex justify-between items-center">
           <div>
-            <a href="#" className="text-lg font-extrabold text-gray-900 dark:text-gray-100"> Lalit </a>
-            <p className="text-sm text-gray-500">Developed by Lalit</p>
+            <a href="#" className="text-xl font-extrabold text-gray-900 dark:text-gray-100"> Lalit </a>
+           
           </div>
           {/* <div className={`font-semibold`}>
             <ul className={`flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-12 ml-40 ${isOpen ? 'block' : 'hidden'}`}>
