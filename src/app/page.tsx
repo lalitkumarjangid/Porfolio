@@ -178,7 +178,7 @@ const LoadingScreen = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
         >
-          Loading your experience...
+          Initializing experience...
         </motion.div>
         
         <motion.div
